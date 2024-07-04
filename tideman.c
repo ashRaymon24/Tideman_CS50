@@ -11,7 +11,8 @@ int preferences[MAX][MAX];
 // locked[i][j] means i is locked in over j
 bool locked[MAX][MAX];
 
-int start_index;
+//declaring a global variable that is used in the lock_pairs() function
+int start_index; 
 
 // Each pair has a winner, loser
 typedef struct
@@ -221,6 +222,7 @@ void print_winner(void)
     return;
 }
 
+//checks if locking a vote would cause a cycle using recursion
 bool check_cycle(int index, int count)
 {
     bool cycle = false;
